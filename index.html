@@ -6,5 +6,55 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Odin Form</title>
   </head>
-  <body></body>
+  <body>
+    <section class="showcase">
+        <div class="showcase_top">
+            <div class="logo_wrapper">
+                <img src="./assets/images/odin-lined.png" alt="A logo representing Odin">
+                <p>ODIN</p>
+            </div>
+        </div>
+        <div class="showcase_footer">
+            Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank" noreferrer noopener>Halie West</a> at <a href="https://unsplash.com" noreferrer noopener>Unsplash</a>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="intro">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</em></p>
+            <p>You <i>know</i> you want to.</p>
+        </div>
+        <div class="form-container">
+            <p>Let's do this!</p>
+            <div class="form-content">
+                <form action="" id="signup-form">
+                    <fieldset class="names">
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Thor" minlength="4" maxlength="15" autocomplete="off" required>
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Odinson" minlength="4" maxlength="15" required>
+                    </fieldset>
+
+                    <fieldset class="contact_info">
+
+                        <label for="email_address">EMAIL</label>
+                        <input type="email" id="email_address" name="email_address" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" placeholder="thor.odinson@aesir.org" required>
+                        <label for="phone_number">PHONE</label>
+                        <input type="text" id="phone_number" name="phone_number" minlength="6" maxlength="20" pattern="^\+?[\d-]{6,20}$">
+                    </fieldset>
+
+                    <fieldset class="security">
+                        <label for="user_password">PASSWORD</label>
+                        <input type="password" id="user_password" name="user_password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?])(?=.{6,20}$).*$" required>
+                        <label for="confirm_user_password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm_user_password" name="confirm_user_password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?])(?=.{6,20}$).*$" required>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="sign_up">
+            <button class="submit_form">Create Account</button>
+            <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+    </section>
+  </body>
 </html>
