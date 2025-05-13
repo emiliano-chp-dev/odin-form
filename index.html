@@ -28,25 +28,36 @@
             <div class="form-content">
                 <form action="" id="signup-form">
                     <fieldset class="names">
-                        <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="Thor" minlength="4" maxlength="15" autocomplete="off" required>
-                        <label for="last_name">LAST NAME</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Odinson" minlength="4" maxlength="15" required>
+                        <div class="element_wrapper">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="Thor" minlength="4" maxlength="15" autocomplete="off" required>
+                        </div>
+                        <div class="element_wrapper">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="Odinson" minlength="4" maxlength="15" required>
+                        </div>
                     </fieldset>
 
                     <fieldset class="contact_info">
-
-                        <label for="email_address">EMAIL</label>
-                        <input type="email" id="email_address" name="email_address" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" placeholder="thor.odinson@aesir.org" required>
-                        <label for="phone_number">PHONE</label>
-                        <input type="text" id="phone_number" name="phone_number" minlength="6" maxlength="20" pattern="^\+?[\d-]{6,20}$">
+                        <div class="element_wrapper">
+                            <label for="email_address">EMAIL</label>
+                            <input type="email" id="email_address" name="email_address" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" placeholder="thor.odinson@aesir.org" required>
+                        </div>
+                        <div class="element_wrapper">
+                            <label for="phone_number">PHONE</label>
+                            <input type="text" id="phone_number" name="phone_number" minlength="6" maxlength="20" pattern="^\+?[\d-]{6,20}$">
+                        </div>
                     </fieldset>
 
                     <fieldset class="security">
-                        <label for="user_password">PASSWORD</label>
-                        <input type="password" id="user_password" name="user_password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?])(?=.{6,20}$).*$" required>
-                        <label for="confirm_user_password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm_user_password" name="confirm_user_password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?])(?=.{6,20}$).*$" required>
+                        <div class="element_wrapper">
+                            <label for="user_password">PASSWORD</label>
+                            <input type="password" id="user_password" name="user_password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?])(?=.{6,20}$).*$" required>
+                        </div>
+                        <div class="element_wrapper">
+                            <label for="confirm_user_password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm_user_password" name="confirm_user_password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?])(?=.{6,20}$).*$" required>
+                        </div>
                     </fieldset>
                 </form>
             </div>
