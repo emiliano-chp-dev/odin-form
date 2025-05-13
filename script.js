@@ -21,6 +21,31 @@ function main() {
   confirmPasswordInput.addEventListener('input', validateConfirmPassword);
   emailInput.addEventListener('input', validateEmail);
   formSubmitButton.addEventListener('click', validateForm);
+
+  // Functions
+  function setValidationStatus(inputElement, isValid) {
+    if (isValid) {
+      inputElement.setCustomValidity('');
+    } else {
+      if (
+        inputElement === confirmPasswordInput &&
+        passwordInput.value !== confirmPasswordInput.value
+      ) {
+        inputElement.setCustomValidity('Passwords do not match');
+      } else if (
+        inputElement === passwordInput ||
+        inputElement === confirmPasswordInput
+      ) {
+        inputElement.setCustomValidity(
+          'Password must be 6-20 characters with at least one uppercase lettern and one special character'
+        );
+      } else if ((inputElement = emailInput)) {
+        inputElement.setCustomValidity('Please enter a valid email address');
+      } else {
+        inputElement.setCustomValidity('Invalid input');
+      }
+    }
+  }
 }
 
 main();
