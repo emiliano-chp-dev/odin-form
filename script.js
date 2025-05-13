@@ -23,6 +23,12 @@ function main() {
   formSubmitButton.addEventListener('click', validateForm);
 
   // Functions
+  function validatePassword() {
+    const isValid = passwordRegex.test(passwordInput.value);
+    setValidationStatus(passwordInput, isValid);
+    return isValid;
+  }
+
   function setValidationStatus(inputElement, isValid) {
     if (isValid) {
       inputElement.setCustomValidity('');
