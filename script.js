@@ -7,6 +7,11 @@ function main() {
   const passwordInput = document.querySelector('#user_password');
   const confirmPasswordInput = document.querySelector('#confirm_user_password');
   const emailInput = document.querySelector('#email_address');
+
+  // Validation patterns
+  const passwordRegex =
+    /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?])(?=.{6,20}$).*$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 }
 
 main();
