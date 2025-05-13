@@ -29,6 +29,14 @@ function main() {
     return isValid;
   }
 
+  function validateConfirmPassword() {
+    const isValid =
+      passwordInput.value === confirmPasswordInput.value &&
+      passwordRegex.test(confirmPasswordInput.value);
+    setValidationStatus(confirmPasswordInput, isValid);
+    return isValid;
+  }
+
   function setValidationStatus(inputElement, isValid) {
     if (isValid) {
       inputElement.setCustomValidity('');
