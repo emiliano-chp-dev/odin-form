@@ -12,6 +12,14 @@ function main() {
   const passwordRegex =
     /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?])(?=.{6,20}$).*$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  // Set form element to invalidated state
+  formElement.noValidate = true;
+
+  // Event listeners for reali-time validatin
+  passwordInput.addEventListener('input', validatePassword);
+  confirmPasswordInput.addEventListener('input', validateConfirmPassword);
+  emailInput.addEventListener('input', validateEmail);
 }
 
 main();
