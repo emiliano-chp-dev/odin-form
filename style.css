@@ -53,6 +53,14 @@ a:visited {
   color: #fff;
 }
 
+.sign_up a {
+  color: #000;
+}
+
+.sign_up a:visited {
+  color: #000;
+}
+
 label {
   font-size: 8px;
   font-weight: 600;
