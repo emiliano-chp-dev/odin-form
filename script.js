@@ -20,6 +20,7 @@ function main() {
   passwordInput.addEventListener('input', validatePassword);
   confirmPasswordInput.addEventListener('input', validateConfirmPassword);
   emailInput.addEventListener('input', validateEmail);
+  formSubmitButton.addEventListener('click', validateForm);
 }
 
 main();
