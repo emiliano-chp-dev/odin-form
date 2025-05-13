@@ -37,6 +37,12 @@ function main() {
     return isValid;
   }
 
+  function validateEmail() {
+    const isValid = emailRegex.test(emailInput.value);
+    setValidationStatus(emailInput, isValid);
+    return isValid;
+  }
+
   function setValidationStatus(inputElement, isValid) {
     if (isValid) {
       inputElement.setCustomValidity('');
