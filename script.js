@@ -66,6 +66,36 @@ function main() {
       }
     }
   }
+
+  function validateForm(e) {
+    e.preventDefault();
+
+    // Run validations
+    const passwordValid = validatePassword();
+    const confirmPasswordValid = validateConfirmPassword();
+    const emailValid = validateEmail();
+
+    // Check built-in validation for other fields
+    const otherFieldsValid = Array.from(formElement.elements)
+      .filter(
+        el =>
+          el !== passwordInput &&
+          el !== confirmPasswordInput &&
+          el !== emailInput
+      )
+      .every(el => el.checkValidity());
+
+    if (
+      passwordValid &&
+      confirmPasswordValid &&
+      emailValid &&
+      otherFieldsValid
+    ) {
+      formElement.submit();
+    } else {
+      formElement.reportValidity();
+    }
+  }
 }
 
 main();
